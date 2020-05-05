@@ -72,7 +72,7 @@ sumsteps <- tapply(data$steps, data$date, sum, na.rm=TRUE)
 hist(sumsteps, breaks=20, xlab="Steps per day", main="Total number of steps per day", col=3)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](PA1_template_files/figure-html/raw+TRUE-1.png)<!-- -->
 
 ```r
 # calculate the mean and median
@@ -107,7 +107,7 @@ avday <- rename(avday, avsteps=x)
 plot(avday$interval, avday$avsteps, xlab="5min interval", ylab="Average steps", main="Average daily activity pattern", col=3, type="l")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ```r
 #return the maximum average steps value
@@ -155,7 +155,7 @@ sumsteps <- tapply(data$steps, data$date, sum, na.rm=TRUE)
 hist(sumsteps, breaks=20, xlab="Steps per day", main="Total number of steps per day", col=3, ylim=c(0, 20))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 #Calculate the differences of mean and median between the 2 situations
@@ -192,7 +192,7 @@ avdaywd <- aggregate (steps ~ interval + day, data=datafilled, mean)
 ggplot(avdaywd, aes(interval, steps)) + geom_line() + facet_grid(day~.) + xlab("5min interval") + ylab ("Average steps") + ggtitle("Average daily activity pattern week vs weekends")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 
 
