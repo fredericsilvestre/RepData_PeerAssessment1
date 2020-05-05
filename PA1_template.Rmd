@@ -43,7 +43,7 @@ For this part of the assignment, you can ignore the missing values in the datase
 
 2. Calculate and report the mean and median total number of steps taken per day
 
-```{r, raw+TRUE}
+```{r}
 # using tapply, make a histogram of the sum of steps taken each day, without NA
 library(dplyr)
 sumsteps <- tapply(data$steps, data$date, sum, na.rm=TRUE)
@@ -97,6 +97,8 @@ hist(sumsteps, breaks=20, xlab="Steps per day", main="Total number of steps per 
 #Calculate the differences of mean and median between the 2 situations
 diffmean <- mean(sumstepsfilled) - mean(sumsteps)
 diffmedian <- median(sumstepsfilled) - median(sumsteps)
+print(diffmean)
+print(diffmedian)
 ```
 
 ## Are there differences in activity patterns between weekdays and weekends?
