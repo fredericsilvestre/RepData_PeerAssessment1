@@ -43,7 +43,7 @@ For this part of the assignment, you can ignore the missing values in the datase
 
 2. Calculate and report the mean and median total number of steps taken per day
 
-```{r}
+```{r, raw+TRUE}
 # using tapply, make a histogram of the sum of steps taken each day, without NA
 library(dplyr)
 sumsteps <- tapply(data$steps, data$date, sum, na.rm=TRUE)
